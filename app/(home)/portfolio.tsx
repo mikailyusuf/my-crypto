@@ -4,7 +4,7 @@ import { getCryptoPrices } from "@/services/api";
 import { useEffect, useState } from "react";
 import { View, FlatList, Text } from "react-native";
 
-export const PortfolioScreen = () => {
+const PortfolioScreen = () => {
   const [cryptoData, setCryptoData] = useState<CryptoModel[]>([]);
 
   useEffect(() => {
@@ -17,8 +17,14 @@ export const PortfolioScreen = () => {
   };
 
   return (
-    <View className="flex-1 p-4 bg-white">
-      <Text className="text-2xl font-bold text-gray-800 mb-4">Portfolio</Text>
+    <View
+    // className="flex-1 p-4 bg-white"
+    >
+      <Text
+      // className="text-2xl font-bold text-gray-800 mb-4"
+      >
+        Portfolio
+      </Text>
 
       <FlatList
         data={cryptoData}
